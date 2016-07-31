@@ -4,6 +4,7 @@
   "description": "Knowledge Consolidator",
   "main": "index.js",
   "scripts": {
+    "dev": "./node_modules/.bin/webpack-dev-server --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
