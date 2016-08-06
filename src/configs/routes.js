@@ -6,8 +6,7 @@ class AppRouter extends React.Component {
   render () {
     return <Router history={browserHistory}>
             <Route path="/" component={BookList}>
-              <Route path="books" component={BookList}>
-                {/*<Route path="/books/:bookId" component={BookItem}/>*/}
+              <Route path="book/:bookId" component={BookItem}>
               </Route>
             </Route>
           </Router>
