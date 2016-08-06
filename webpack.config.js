@@ -19,6 +19,9 @@ module.exports = {
             filename: 'index.html',
             template: 'src/index.html',
             inject: true
+        }),
+        new webpack.ProvidePlugin({
+            _: "lodash"
         })
     ]
 };
