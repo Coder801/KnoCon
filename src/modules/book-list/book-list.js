@@ -5,7 +5,7 @@ import bookListItems from './book-list-items.js';
 class BookList extends React.Component {
   render () {
     return <div>
-            { bookListItems.map((book) => <BookListItem name={book.name}/>) }
+            { bookListItems.map((book, index) => <BookListItem book={book} key={index} />) }
           </div>
   }
 }
