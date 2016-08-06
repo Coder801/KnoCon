@@ -4,6 +4,7 @@
   "description": "Knowledge Consolidator",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/webpack --progress --colors",
     "dev": "./node_modules/.bin/webpack-dev-server --progress --colors",
     "lint": "node_modules/.bin/eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
