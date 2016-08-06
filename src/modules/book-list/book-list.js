@@ -1,6 +1,7 @@
 import React from 'react';
 import BookListItem from './book-list-item/book-list-item.js';
 import bookListItems from './book-list-items.js';
+import './book-list.css';
 
 class BookList extends React.Component {
   render () {
