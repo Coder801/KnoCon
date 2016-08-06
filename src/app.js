@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BookList from './modules/book-list/book-list.js';
+import AppRouter from './configs/routes.js';
 
 
-ReactDOM.render(<BookList />, document.getElementById('bookList'))
+ReactDOM.render(<AppRouter />, document.getElementById('app'))
