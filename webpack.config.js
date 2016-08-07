@@ -9,6 +9,9 @@ module.exports = {
     entry: './src/app.js',
     output: {path: join(__dirname, 'build'), filename: 'bundle.js'},
     module: {
+        preLoaders: [
+            { test: /\.json$/, exclude: /node_modules/, loader: 'json'},
+        ],
         loaders: [
         {
             test: /.js?$/,
@@ -16,7 +19,7 @@ module.exports = {
             exclude: /node_modules/
         }, {
             test:   /\.css$/,
-            loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
+            loader: ExtractTextPlugin.extract('style', 'css-loader!postcss-loader')
         }
         ]
     },
@@ -46,7 +49,7 @@ module.exports = {
             require("postcss-custom-selectors"),
             require("postcss-easy-import"),
             require("postcss-extend"),
-            require("postcss-focus-hover"),
+            require("postcss-focus"),
             require("postcss-mixins"),
             require("postcss-nested"),
             require("postcss-pxtorem")({
@@ -59,7 +62,10 @@ module.exports = {
             require("postcss-short"),
             require("postcss-write-svg"),
             require("css-mqpacker"),
-            require("cssnano")
+            require('postcss-modules')({
+                generateScopedName: '[name]__[local]___[hash:base64:5]'
+            }),
+            // require("cssnano")
         ];
     }
 };

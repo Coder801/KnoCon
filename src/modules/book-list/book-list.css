@@ -1,6 +1,14 @@
-body {
+:global .page {
+  padding: 20px;
+}
+
+.list {
   display: flex;
-  p {
-    color: red;
-  }
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
