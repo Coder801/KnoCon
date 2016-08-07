@@ -34,6 +34,10 @@ module.exports = {
         }),
         new ExtractTextPlugin("bundle.css")
     ],
+    devServer: {
+        host: 'localhost',
+        port: 8080
+    },
     postcss: function () {
         return [
             require("autoprefixer"),
