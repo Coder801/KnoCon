@@ -1,5 +1,4 @@
-import React from 'react';
-import books from '../book-list/book-list-items.js';
+import books from '../book-list/book-list.json';
 import './book-item.css';
 
 

@@ -26,7 +26,9 @@ module.exports = {
       inject: true
     }),
     new webpack.ProvidePlugin({
-      _: "lodash"
+      _: "lodash",
+      'React': 'react',
+      'ReactDOM': 'react-dom'
     }),
     new ExtractTextPlugin("bundle.css")
   ],

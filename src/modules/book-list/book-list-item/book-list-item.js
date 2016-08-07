@@ -1,7 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router';
 
 import './book-list-item.css';
+
 import style from './book-list-item.css.json'
 
 class BookListItem extends React.Component {
