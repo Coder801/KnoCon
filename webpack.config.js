@@ -16,7 +16,7 @@ module.exports = {
       exclude: /node_modules/
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style', 'css-loader!postcss-loader')
+      loader: ExtractTextPlugin.extract('style', 'css-loader?minimize!postcss-loader')
     }]
   },
   plugins: [
@@ -70,8 +70,7 @@ module.exports = {
       require("css-mqpacker"),
       require('postcss-modules')({
         generateScopedName: '[name]__[local]___[hash:base64:5]'
-      }),
-      // require("cssnano")
+      })
     ];
   }
 };
