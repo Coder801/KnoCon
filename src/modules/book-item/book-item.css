@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.img {
+  > img {
+    image-size: responsive;
+  }
+}
+.desc {
+  > h2 {
+    font-size: 20px;
+  }
+  > p {
+    font-size: 14px;
+  }
+}
