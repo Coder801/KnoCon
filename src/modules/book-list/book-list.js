@@ -5,7 +5,7 @@ import './book-list.css';
 import style from './book-list.css.json';
 
 class BookList extends React.Component {
-  render() {
+  render() { 
     return <div className={style.list}>
             { bookListItems.map((book, index) => <BookListItem book={book} key={index} />) }
           </div>
