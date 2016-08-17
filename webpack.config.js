@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './src/app.js',
-  output: { path: join(__dirname, 'build'), filename: 'bundle.js' },
+  output: { path: join(__dirname, 'build'), publicPath: join(__dirname, 'build'), filename: 'bundle.js' },
   module: {
     preLoaders: [
       { test: /\.json$/, exclude: /node_modules/, loader: 'json' },
