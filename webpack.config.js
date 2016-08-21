@@ -28,7 +28,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       _: "lodash",
       'React': 'react',
-      'ReactDOM': 'react-dom'
+      'ReactDOM': 'react-dom',
+      'axios': 'axios'
     }),
     new ExtractTextPlugin("bundle.css")
   ],
