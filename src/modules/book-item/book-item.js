@@ -1,4 +1,5 @@
 import './book-item.css';
+import config from '../../configs/app.config';
 import style from './book-item.css.json';
 
 
@@ -6,10 +7,9 @@ export default class BookItem extends React.Component {
   componentWillMount () {
     const bookId = Number(this.props.params.bookId);
     this.setState({ book: [] });
-    request.get(`http://localhost:3000/api/v1/books/${bookId}`)
-      .withCredentials()
+    axios.get(`${config.entities.books}/${bookId}`)
       .then((res) => {
-        this.setState({ book: res.body });
+        this.setState({ book: res.data });
       });
   }
 

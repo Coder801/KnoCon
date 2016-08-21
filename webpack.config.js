@@ -29,7 +29,7 @@ module.exports = {
       _: "lodash",
       'React': 'react',
       'ReactDOM': 'react-dom',
-      'request': 'superagent'
+      'axios': 'axios'
     }),
     new ExtractTextPlugin("bundle.css")
   ],

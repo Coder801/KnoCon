@@ -1,3 +1,4 @@
+import config from '../../configs/app.config';
 import BookListItem from './book-list-item/book-list-item.js';
 
 import './book-list.css';
@@ -6,10 +7,9 @@ import style from './book-list.css.json';
 class BookList extends React.Component {
   componentWillMount () {
     this.setState({ bookList: [] });
-    request.get('http://localhost:3000/api/v1/books')
-      .withCredentials()
+    axios.get(config.entities.books)
       .then((res) => {
-        this.setState({ bookList: res.body });
+        this.setState({ bookList: res.data });
       });
   }
 
