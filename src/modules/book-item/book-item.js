@@ -5,7 +5,7 @@ import style from './book-item.css.json';
 
 export default class BookItem extends React.Component {
   componentWillMount () {
-    const bookId = Number(this.props.params.bookId);
+    const bookId = this.props.params.bookId;
     this.setState({ book: [] });
     axios.get(`${config.entities.books}/${bookId}`)
       .then((res) => {
@@ -18,11 +18,11 @@ export default class BookItem extends React.Component {
     return (
       <div className={style.item}>
         <figure className={style.img}>
-          <img src={book.imageUrl} alt={book.name} />
+          <img src={book.imageUrl} alt={book.title} />
         </figure>
         <div className={style.desc}>
-          <h2>{ book.name }</h2>
-          <p>{ book.desc }</p>
+          <h2>{ book.title }</h2>
+          <p>{ book.description }</p>
         </div>
       </div>
       )
